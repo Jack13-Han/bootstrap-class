@@ -1,0 +1,14 @@
+$body-bg: rgba(7, 120, 165, 0.781);
+$body-color: rgb(32, 17, 240);
+
+$theme-colors: (
+  "primary":    #581b98,
+  "secondary": #a7ff83,
+  "success":    $success,
+  "info":       #ff6d24,
+  "warning":    #fd0054,
+  "danger":     #4bc2c5,
+  "light":      #9764c7,
+  "dark":       #df8931
+);
+@import '../node_modules/bootstrap/scss/bootstrap';

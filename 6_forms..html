@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="border p-3 my-5">
+                    <h3>Bootstrap Form</h3><hr>
+
+                    <div  class="mb-3">
+                        <label class="form-label">Your  Name</label>
+                        <input type="text "  value="Han Wai Htun"  class="form-control is-valid" placeholder="Eenter Your Name">
+                        <small class="valid-feedback">Name is correct</small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email "  value="asjhl"  class="form-control is-invalid" placeholder="Enter  Your Email  Address">
+                        <small  class="invalid-feedback">Email format wrong</small>
+                    </div>
+
+                    <div  class="form-floating mb-3">
+                        
+                        <input type="text "  class="form-control" placeholder="Enter Your Email Address">
+                        <label for="floatingInput">Address</label>
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label for="" class="form-label">Nationality</label>
+                        <select name="" id="" class="form-select">
+                            <option value="Myanmar">Myanmar</option>
+                            <option value="Korea">Korea</option>
+                            <option value="China">China</option>
+                            <option value="United Staet Of America">United Staet Of America</option>
+                        </select>
+                    </div>
+
+                    <div class="row g-2 mb-3">
+                        <div class="col-lg-9 col-12">
+                            <label for="" class="form-label">Date of birth</label>
+                            <input type="date" class="form-control">
+                        </div>
+
+                        <div class="col-lg-3 col-12">
+                            <label for="" class="form-label">Age</label>
+                            <input type="number" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="" class="form-label">Select Gender</label><br>
+                        <div class="form-check-inline">
+                            <input type="radio" class="form-check-input" id="male" value="male" name="gender">
+                            <label for="male" class="form-check-label">Male</label>
+                        </div>
+
+                        <div class="form-check-inline">
+                            <input type="radio" class="form-check-input" id="female" value="female" name="gender"> 
+                            <label for="female" class="form-check-label">Female</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="" class="form-label">YOur Skill</label><br>
+                        <div class="form-check-inline">
+                            <input type="checkbox" class="form-check-input" id="html" value="html" name="skill[]">
+                            <label for="html" class="form-check-label">HTMl</label>
+                        </div>
+                        <div class="form-check-inline">
+                            <input type="checkbox" class="form-check-input" id="css" value="css" name="skill[]">
+                            <label for="css" class="form-check-label">CSS</label>
+                        </div>
+                        <div class="form-check-inline">
+                            <input type="checkbox" class="form-check-input" id="js" value="js" name="skill[]">
+                            <label for="js" class="form-check-label">JavaScript</label>
+                        </div>
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label for="" class="form-label"></label>
+                        <input type="file"  class="form-control" multiple>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="" class="form-label">Range Test</label>
+                        <input type="range"  class="form-range" min="0" max="10">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="" class="form-label">Money</label>
+                        <div class="input-group">
+                            
+                            <span class="input-group-text" id="basic-addon1">$</span>
+                            <input type="text" class="form-control" placeholder="Amount" aria-label="Username" aria-describedby="basic-addon1">
+                          </div>
+                    </div>
+
+                    <button class="btn btn-success">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

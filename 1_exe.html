@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="my-5">
+                                    <!-- Button trigger modal -->
+                <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#mb">Show Modal</button>
+
+
+                <div class="modal fade" tabindex="-1" data-bs-backdrop="static" id="mb">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">Modal </h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="images/2.jpg" class="img-fluid" alt="Han Wai Htun">
+                          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit tenetur unde natus ea neque autem maiores aliquam beatae. Iste doloremque, magni et odio at quidem voluptatibus. Omnis, velit. At, atque.</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/bootstrap.js"></script>
+    <script>
+      let mb = document.getElementById("mb");
+      let modalBox = new bootstrap.Modal(mb);
+
+
+      setTimeout(function() {
+        modalBox.show()
+      },5000);
+
+      setTimeout(function(){
+        modalBox.hide()
+      },7000);
+    </script>
+</body>
+</html>

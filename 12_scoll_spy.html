@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast And Scroll Spy</title>
+
+    <style>
+        .text_img{
+            width: 50px;
+        }
+    </style>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+
+</head>
+<body class="position-relative">
+    <div aria-live="polite" aria-atomic="true" class="position-relative">
+        <!-- Position it: -->
+        <!-- - `.toast-container` for spacing between toasts -->
+        <!-- - `.position-absolute`, `top-0` & `end-0` to position the toasts in the upper right corner -->
+        <!-- - `.p-3` to prevent the toasts from sticking to the edge of the container  -->
+        <div class="toast-container position-fixed end-0  bottom-0">
+      
+          <!-- Then put toasts within -->
+          <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+              <img src="images/1.jpg" class="text_img rounded me-2" alt="...">
+              <strong class="me-auto">Chit Thu lay</strong>
+              <small class="text-muted">just now</small>
+              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+              See? Just like this.
+            </div>
+          </div>
+      
+          <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+              <img src="images/2.jpg" class="text_img rounded me-2" alt="...">
+              <strong class="me-auto">Me :)</strong>
+              <small class="text-muted">2 seconds ago</small>
+              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+              Heads up, toasts will stack automatically
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <div class="my-5">
+                    <nav id="aa" class="navbar navbar-light bg-light px-3">
+                        <a class="navbar-brand" href="#">Navbar</a>
+                        <ul class="nav nav-pills">
+                          <li class="nav-item">
+                            <a class="nav-link" href="#scrollspyHeading1">First</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#scrollspyHeading2">Second</a>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
+                              <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </nav>
+                      <div data-bs-spy="scroll" data-bs-target="#aa" data-bs-offset="0" class="scrollspy-example overflow-scroll" tabindex="0" style="height: 200px;">
+                        <h4 id="scrollspyHeading1">First heading</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, labore ipsum! Iste, perspiciatis dolor blanditiis consectetur ipsa officia ipsam ea voluptate suscipit enim. Nam, accusantium reiciendis. Accusamus necessitatibus harum quod.</p>
+                        <h4 id="scrollspyHeading2">Second heading</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, labore ipsum! Iste, perspiciatis dolor blanditiis consectetur ipsa officia ipsam ea voluptate suscipit enim. Nam, accusantium reiciendis. Accusamus necessitatibus harum quod.</p>
+                        <h4 id="scrollspyHeading3">Thidd heading</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, labore ipsum! Iste, perspiciatis dolor blanditiis consectetur ipsa officia ipsam ea voluptate suscipit enim. Nam, accusantium reiciendis. Accusamus necessitatibus harum quod.</p>
+                        <h4 id="scrollspyHeading4">Fourth heading</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, labore ipsum! Iste, perspiciatis dolor blanditiis consectetur ipsa officia ipsam ea voluptate suscipit enim. Nam, accusantium reiciendis. Accusamus necessitatibus harum quod.</p>
+                        <h4 id="scrollspyHeading5">Fifth heading</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, labore ipsum! Iste, perspiciatis dolor blanditiis consectetur ipsa officia ipsam ea voluptate suscipit enim. Nam, accusantium reiciendis. Accusamus necessitatibus harum quod.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+
+    <script src="js/bootstrap.js"></script>
+    <script>
+        var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+        target: '#aa'
+        })
+
+        var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+        var toastList = toastElList.map(function (toastEl) {
+        let toast= new bootstrap.Toast(toastEl, 
+            {
+                autohide:true,
+                delay: 20000,
+                animation:true,
+            }
+        );
+        toast.show()
+        
+        })
+        
+    </script>
+</body>
+</html>
